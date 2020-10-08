@@ -4,7 +4,7 @@ import Categories from './Categories';
 import items from './data';
 
 function App() {
-  return <h2>Menu Project Setup</h2>;
+  return <h2>menu project setup</h2>;
 }
 
 export default App;
