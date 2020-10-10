@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { FaBars } from 'react-icons/fa'
 
 const Home = () => {
-  return <h2>home</h2>
+  return <h2>home component</h2>
 }
 
 export default Home
