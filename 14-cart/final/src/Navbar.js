@@ -1,9 +1,7 @@
-import React from 'react';
-import { useGlobalContext } from './context';
+import React from 'react'
+import { useGlobalContext } from './context'
 const Navbar = () => {
-  const {
-    state: { amount },
-  } = useGlobalContext();
+  const { amount } = useGlobalContext()
   return (
     <nav>
       <div className='nav-center'>
@@ -18,7 +16,7 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
