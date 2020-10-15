@@ -272,7 +272,8 @@ Form
 ======
 */
 .search {
-  margin-top: 7rem;
+  margin-top: 1rem;
+  padding-bottom: 0;
 }
 
 .search-form {
