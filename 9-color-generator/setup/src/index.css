@@ -151,6 +151,7 @@ Color Generator
   margin-bottom: 0;
   margin-right: 2rem;
 }
+
 input {
   border-color: transparent;
   padding: 0.5rem 1rem;
@@ -168,6 +169,15 @@ input {
   text-transform: capitalize;
   color: var(--clr-white);
   cursor: pointer;
+}
+@media screen and (max-width: 576px) {
+  .container h3 {
+    font-size: 1rem;
+  }
+  input,
+  .btn {
+    font-size: 0.85rem;
+  }
 }
 input.error {
   border: 2px solid var(--clr-red-dark);
