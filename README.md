@@ -32,7 +32,7 @@
 
 13. Modal and Sidebar
 
-#### useReducer
+#### useReducer and useContext
 
 14. Cart
 
