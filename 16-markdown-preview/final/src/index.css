@@ -147,7 +147,7 @@ Markdown
 .input {
   border-color: transparent;
   border-radius: var(--radius);
-  font-size: 2rem;
+  font-size: 1.2rem;
   line-height: 2;
   box-shadow: var(--dark-shadow);
 }
