@@ -13,6 +13,7 @@ function App() {
   const [loading, setLoading] = useState(true)
   const [person, setPerson] = useState(null)
   const [value, setValue] = useState('random person')
+  const [title, setTitle] = useState('name')
   const getPerson = async () => {
     setLoading(true)
     const response = await fetch(url)
@@ -40,6 +41,7 @@ function App() {
     }
     setPerson(newPerson)
     setLoading(false)
+    setTitle('name')
     setValue(newPerson.name)
   }
 
@@ -49,6 +51,7 @@ function App() {
   const handleValue = (e) => {
     if (e.target.classList.contains('icon')) {
       const newValue = e.target.dataset.label
+      setTitle(newValue)
       setValue(person[newValue])
     }
   }
@@ -62,7 +65,7 @@ function App() {
             alt='random user'
             className='user-img'
           />
-          <p className='user-title'>My name is</p>
+          <p className='user-title'>My {title} is</p>
           <p className='user-value'>{value}</p>
           <div className='values-list'>
             <button
