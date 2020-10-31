@@ -150,6 +150,7 @@ Markdown
   font-size: 1.2rem;
   line-height: 2;
   box-shadow: var(--dark-shadow);
+  min-height: 30vh;
 }
 .input,
 .result {
