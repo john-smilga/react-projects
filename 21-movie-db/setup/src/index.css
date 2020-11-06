@@ -275,3 +275,7 @@ Single Movie
     grid-template-columns: 1fr 2fr;
   }
 }
+.page-error {
+  text-align: center;
+  padding: 2rem;
+}
