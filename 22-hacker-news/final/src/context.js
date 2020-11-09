@@ -9,7 +9,7 @@ import {
 } from './actions'
 import reducer from './reducer'
 
-const APIENDPOINT = 'https://hn.algolia.com/api/v1/search?'
+const API_ENDPOINT = 'https://hn.algolia.com/api/v1/search?'
 
 const initialState = {
   isLoading: true,
@@ -29,7 +29,6 @@ const AppProvider = ({ children }) => {
     try {
       const response = await fetch(url)
       const data = await response.json()
-      console.log(data)
       dispatch({
         type: SET_STORIES,
         payload: { hits: data.hits, nbPages: data.nbPages },
@@ -38,25 +37,23 @@ const AppProvider = ({ children }) => {
       console.log(error)
     }
   }
+
   const removeStory = (id) => {
     dispatch({ type: REMOVE_STORY, payload: id })
-  }
-
-  const handlePage = (value) => {
-    dispatch({ type: HANDLE_PAGE, payload: value })
   }
   const handleSearch = (query) => {
     dispatch({ type: HANDLE_SEARCH, payload: query })
   }
-
+  const handlePage = (value) => {
+    dispatch({ type: HANDLE_PAGE, payload: value })
+  }
   useEffect(() => {
-    fetchStories(`${APIENDPOINT}query=${state.query}&page=${state.page}`)
-    // dispatch({ type: 'testing' })
-  }, [state.page, state.query])
+    fetchStories(`${API_ENDPOINT}query=${state.query}&page=${state.page}`)
+  }, [state.query, state.page])
 
   return (
     <AppContext.Provider
-      value={{ ...state, fetchStories, removeStory, handlePage, handleSearch }}
+      value={{ ...state, removeStory, handleSearch, handlePage }}
     >
       {children}
     </AppContext.Provider>
