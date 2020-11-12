@@ -10,27 +10,27 @@ function App() {
     loading,
     questions,
     index,
+    correct,
     nextQuestion,
     checkAnswer,
-    correct,
   } = useGlobalContext()
   if (waiting) {
     return <SetupForm />
   }
   if (loading) {
-    return <Loading></Loading>
+    return <Loading />
   }
+
   const { question, incorrect_answers, correct_answer } = questions[index]
   // const answers = [...incorrect_answers, correct_answer]
   let answers = [...incorrect_answers]
   const tempIndex = Math.floor(Math.random() * 4)
   if (tempIndex === 3) {
-    answers = [...incorrect_answers, correct_answer]
+    answers.push(correct_answer)
   } else {
     answers.push(answers[tempIndex])
     answers[tempIndex] = correct_answer
   }
-
   return (
     <main>
       <Modal />
@@ -53,7 +53,7 @@ function App() {
             })}
           </div>
         </article>
-        <button onClick={nextQuestion} className='next-question'>
+        <button className='next-question' onClick={nextQuestion}>
           next question
         </button>
       </section>
