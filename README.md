@@ -16,10 +16,10 @@
 
 2. Tours
 3. Reviews
-4. Questions
-5. Menu
-6. Tabs
-7. Slider
+4. Accordion
+4. Menu
+5. Tabs
+6. Slider
 
 #### Forms
 
