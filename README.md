@@ -44,9 +44,8 @@
 
 15. Cocktails
 
-## Advanced Projects
+## Advanced Projects (Course Exclusive)
 
-Course Exclusive
 [Course Link](https://www.udemy.com/course/react-tutorial-and-projects-course/?couponCode=REACT-OCT)
 
 16. Markdown Preview
