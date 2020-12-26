@@ -1,7 +1,7 @@
 const questions = [
   {
     id: 1,
-    title: 'Do I have to allow the use of cookes?',
+    title: 'Do I have to allow the use of cookies?',
     info:
       'Unicorn vinyl poutine brooklyn, next level direct trade iceland. Shaman copper mug church-key coloring book, whatever poutine normcore fixie cred kickstarter post-ironic street art.',
   },
@@ -29,5 +29,5 @@ const questions = [
     info:
       'Locavore franzen fashion axe live-edge neutra irony synth af tilde shabby chic man braid chillwave waistcoat copper mug messenger bag. Banjo snackwave blog, microdosing thundercats migas vaporware viral lo-fi seitan ',
   },
-];
-export default questions;
+]
+export default questions
