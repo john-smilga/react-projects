@@ -25,7 +25,7 @@ function App() {
       const response = await fetch(url)
       const data = await response.json()
       setPhotos((oldPhotos) => {
-        if (query && page === 1) {
+        if (query && (page === 1 || page === 0) {
           return data.results
         } else if (query) {
           return [...oldPhotos, ...data.results]
@@ -60,7 +60,11 @@ function App() {
   }, [])
   const handleSubmit = (e) => {
     e.preventDefault()
-    setPage(1)
+    if(page === 1){
+      setPage(0);
+    else {
+      setPage(1)
+    }
   }
   return (
     <main>
