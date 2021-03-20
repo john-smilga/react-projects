@@ -29,6 +29,9 @@ function App() {
           return data.results
         } else if (query) {
           return [...oldPhotos, ...data.results]
+        } else if (!query && (page === 1 || page === 0)) {
+          // If there is no query
+          return data;
         } else {
           return [...oldPhotos, ...data]
         }
