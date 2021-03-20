@@ -26,6 +26,7 @@ function App() {
       const data = await response.json()
       setPhotos((oldPhotos) => {
         if (query && (page === 1 || page === 0) {
+          // if we search again without scrolling
           return data.results
         } else if (query) {
           return [...oldPhotos, ...data.results]
