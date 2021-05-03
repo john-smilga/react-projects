@@ -250,3 +250,7 @@ main {
   background: var(--clr-primary-5);
   color: var(--clr-primary-1);
 }
+.icon {
+  font-size: 4rem;
+  color: red;
+}
