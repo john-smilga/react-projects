@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-const Tour = ({id, image, info, price, name}) => {
+const Tour = ({id, image, info, price, name, removeTour}) => {
   // by default, set readMore to false, so that we change it to true onClick to reveal full info
   const [readMore, setReadMore] = useState(false);
-
+  
   return (
     <section className="single-tour">
       <img src={image} alt={name}/>
@@ -20,10 +20,14 @@ const Tour = ({id, image, info, price, name}) => {
           <button onClick={()=> setReadMore(!readMore)}>
           {readMore?"show less":"read more"}
         </button>
+        </p> 
         
-        </p>
-        
-        <button className="delete-btn">Not Interested</button>
+        <button 
+          className="delete-btn" 
+          onClick={()=> removeTour(id)}
+        >
+          Not Interested
+        </button>
       </footer>
     </section>
   )
