@@ -190,3 +190,13 @@ main {
   /* outline: 1px solid rgba(242, 138, 178, 0.8); */
   cursor: pointer;
 }
+
+.container .removal-btn {
+  display: inline;
+  z-index: 2;
+  width: 22px;
+  height: 22px;
+  font-size: 0.8em;
+  margin: 0;
+  padding: 0;
+}
