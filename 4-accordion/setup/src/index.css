@@ -177,6 +177,7 @@ main {
   margin-bottom: 1rem;
   border-radius: var(--radius);
   box-shadow: var(--light-shadow);
+  cursor: pointer;
 }
 .question h4 {
   text-transform: none;
@@ -210,4 +211,5 @@ main {
   margin-left: 1rem;
   align-self: center;
   min-width: 2rem;
+  z-index: 3;
 }
