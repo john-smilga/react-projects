@@ -5,7 +5,7 @@ const Question = ({id, title, info}) => {
   const [seeMore, setSeeMore] = useState(false);
 
   return (
-    <article className="question" onClick={()=> setSeeMore(!seeMore)}>
+    <article className="question">
       <header>
         <h4>{title}</h4>  
         <button className="btn" onClick={()=> setSeeMore(!seeMore)}>
