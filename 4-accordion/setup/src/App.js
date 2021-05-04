@@ -5,10 +5,20 @@ function App() {
   console.log(data);
   const {id, title, info} = data; 
 
+  const [questions, setQuestions] = useState(data);
   return(
     <article className="container">  
-      <h2>Questions And Answers About Login</h2>
-      <SingleQuestion data={data} />
+      <h3>Questions And Answers About Login</h3>
+      
+      <section className="info">
+        {
+          questions.map((question) => {
+            return (
+              <SingleQuestion key={question.id} {...question}/>
+            )} 
+          ) 
+        }
+      </section>
     </article>
   )
 }
