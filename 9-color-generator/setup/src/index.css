@@ -162,7 +162,7 @@ input {
   border-bottom-left-radius: var(--radius);
 }
 .btn {
-  background: var(--clr-primary-5);
+  /* background: var(--clr-primary-5); */
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
   border-color: transparent;
@@ -216,9 +216,20 @@ input.error {
 .color-dark .percent-value {
   color: var(--clr-black);
 }
-
 .alert {
   /* text-transform: uppercase; */
   font-size: 0.85rem;
   margin-top: 0.5rem;
+}
+.title-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.7rem;
+}
+.mini-text {
+  font-size: 0.6rem;
+  margin-bottom: 0;
+  margin-right: 2rem;
 }
