@@ -147,10 +147,12 @@ Slider
   font-weight: 500;
 }
 .title span {
-  font-size: 0.85em;
+  font-size: .6em;
   color: var(--clr-primary-5);
   margin-right: 1rem;
   font-weight: 700;
+  position: relative;
+  bottom: 5px;
 }
 .section-center {
   margin: 0 auto;
@@ -162,7 +164,7 @@ Slider
   text-align: center;
   position: relative;
   display: flex;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 .person-img {
   border-radius: 50%;
@@ -239,10 +241,10 @@ article {
   left: 0;
   width: 100%;
   height: 100%;
-  /* opacity: 0; */
+  opacity: 0;
   transition: var(--transition);
 }
-/* article.activeSlide {
+article.activeSlide {
   opacity: 1;
   transform: translateX(0);
 }
@@ -251,4 +253,4 @@ article.lastSlide {
 }
 article.nextSlide {
   transform: translateX(100%);
-} */
+}
