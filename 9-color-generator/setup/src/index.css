@@ -151,7 +151,9 @@ Color Generator
   margin-bottom: 0;
   margin-right: 2rem;
 }
-
+article {
+  min-height: 172px;
+}
 input {
   border-color: transparent;
   padding: 0.5rem 1rem;
@@ -208,9 +210,15 @@ input.error {
 .color-light .percent-value {
   color: var(--clr-white);
 }
+.color-dark .color-value {
+  color: var(--clr-black);
+}
+.color-dark .percent-value {
+  color: var(--clr-black);
+}
 
 .alert {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 0.85rem;
   margin-top: 0.5rem;
 }
