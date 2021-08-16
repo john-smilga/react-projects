@@ -8,14 +8,25 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [tours, setTours] = useState([]);
 
-  const fetchTours =async()=>{
-    setLoading(true);
-    const response =await fetch(url);
-    const tours = await fetch.json();
-    console.log(tours);
+  const removeTour = (id) => {
+    const NewTours = tours.filter((tour) => tour.id !== id);
+    setTours(NewTours);
   };
-  useEffect(()=>
-  fetchTours())
+  const FetchTours = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch(url)
+      const Tours = await response.json()
+      setLoading(false);
+      setTours(Tours);
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    FetchTours();
+  }, []);
   if (loading) {
     return (
       <main>
@@ -23,11 +34,23 @@ function App() {
       </main>
     );
   }
-
-  return <main>
-    <Tours>
-    </Tours>
-  </main>;
+  if (tours.length === 0) {
+    return (
+      <main>
+        <div className='title'>
+          <h2>no tours left</h2>
+        </div>
+        <button className='btn' onClick={FetchTours}>
+          refresh
+        </button>
+      </main>
+    );
+  }
+  return (
+    <main>
+      <Tours tours={tours} removeTour={removeTour} />
+    </main>
+  );
 }
 
 export default App;
