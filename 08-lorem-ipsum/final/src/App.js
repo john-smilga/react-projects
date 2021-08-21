@@ -8,6 +8,7 @@ function App() {
     e.preventDefault();
     let amount = parseInt(count);
     if (count <= 0) {
+      setCount(1);
       amount = 1;
     }
     if (count > 8) {
@@ -24,7 +25,7 @@ function App() {
           type='number'
           name='amount'
           id='amount'
-          value={count}
+          value={count <= 0 ? 0 : count > 8 ? 8 : count}
           onChange={(e) => setCount(e.target.value)}
         />
         <button className='btn'>generate</button>
