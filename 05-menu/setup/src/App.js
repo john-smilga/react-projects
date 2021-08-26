@@ -7,13 +7,18 @@ function App() {
   const [filteriedItems, setFilteriedItems] = useState(items);
   const [categories, setCategories] = useState([]);
 
+  const filterItems = (category) => {
+    const newItems = items.filter((item) => item.category === category);
+    setFilteriedItems(newItems);
+  }
+
   return (
     <main>
       <section className="menu section">
         <div className="title">
           <h2> Our Menu </h2>
           <div className="underline"></div>
-          <Categories />
+          <Categories filterItems={filterItems} />
           <Menu items={filteriedItems} />
         </div>
       </section>
