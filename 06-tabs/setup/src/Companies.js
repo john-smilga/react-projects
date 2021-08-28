@@ -9,7 +9,7 @@ export default function Companies({ companies, handleSetValue, value }) {
           return (
             <button
               key={index}
-              className={`job-btn ${index === value && 'active-btn'}`}
+              className={`job-btn  ${index === value && 'active-btn'}`}
               onClick={() => handleSetValue(index)}
             >
               {company}

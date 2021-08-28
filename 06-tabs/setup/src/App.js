@@ -44,10 +44,13 @@ function App() {
         <h2>experience</h2>
         <div className="underline"></div>
       </div>
-      <div className="job-center">
+      <div className="jobs-center">
         <Companies companies={companies} handleSetValue={setValue} value={value} />
-        <Job job={jobs[value]} />
+        <Job {...jobs[value]} />
       </div>
+      <button type="button" className="btn">
+        more info
+      </button>
     </section>
   );
 }
