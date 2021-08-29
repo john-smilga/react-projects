@@ -7,8 +7,8 @@ function App() {
   const [index, setIndex] = useState(0);
 
   const checkIndex = (index) => {
-    if (index == people.length - 1) return 0;
-    if (index <= 0) return people.length - 1;
+    if (index == people.length) return 0;
+    if (index < 0) return people.length - 1;
     return index;
   }
 
@@ -28,13 +28,12 @@ function App() {
         <h2><span>/</span> Reviews</h2>
       </div>
       <div className="section-center">
-        <button className="prev" onClick={handlePrevClicked}><FiChevronLeft /></button>
-        <button className="next" onClick={handleNextClicked}><FiChevronRight /></button>
         {
           people.map((person, personIndex) => {
             const { id, image, name, title, quote } = person;
+            let position = 'nextSlide'
             return (
-              <article key={id} className={personIndex === index ? 'activeSlide' : ''}>
+              <article key={id} className={position}> {/*className={personIndex === index ? 'activeSlide' : ''}*/}
                 <img src={image} alt={name} className="person-img" />
                 <h4>{name}</h4>
                 <p className="title">{title}</p>
@@ -44,6 +43,8 @@ function App() {
             )
           })
         }
+        <button className="prev" onClick={handlePrevClicked}><FiChevronLeft /></button>
+        <button className="next" onClick={handleNextClicked}><FiChevronRight /></button>
       </div>
     </section >
   );
