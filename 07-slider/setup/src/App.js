@@ -6,8 +6,23 @@ function App() {
   const [people, setPeople] = useState(data);
   const [index, setIndex] = useState(0);
 
+  useEffect(() => {
+    const lastIndex = people.length - 1;
+    if (index < 0) setIndex(lastIndex);
+    if (index > lastIndex) setIndex(0);
+  }, [index, people]);
+
+  useEffect(() => {
+    let slider = setInterval(() => {
+      setIndex(index + 1);
+    }, 3000);
+    return () => {
+      clearInterval(slider);
+    }
+  }, [index]);
+
   const checkIndex = (index) => {
-    if (index == people.length) return 0;
+    if (index === people.length) return 0;
     if (index < 0) return people.length - 1;
     return index;
   }
@@ -31,7 +46,10 @@ function App() {
         {
           people.map((person, personIndex) => {
             const { id, image, name, title, quote } = person;
-            let position = 'nextSlide'
+            let position = 'nextSlide';
+            if (personIndex === index) position = 'activeSlide';
+            if ((personIndex === index - 1) || (index === 0 && personIndex === people.length - 1)) position = 'lastSlide';
+
             return (
               <article key={id} className={position}> {/*className={personIndex === index ? 'activeSlide' : ''}*/}
                 <img src={image} alt={name} className="person-img" />
@@ -42,9 +60,10 @@ function App() {
               </article>
             )
           })
+
         }
-        <button className="prev" onClick={handlePrevClicked}><FiChevronLeft /></button>
-        <button className="next" onClick={handleNextClicked}><FiChevronRight /></button>
+        <button className="prev" onClick={() => setIndex(index - 1)}><FiChevronLeft /></button>
+        <button className="next" onClick={() => setIndex(index + 1)}><FiChevronRight /></button>
       </div>
     </section >
   );
