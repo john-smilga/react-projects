@@ -9,7 +9,7 @@ function App() {
           <h2>Our Reviews</h2>
           <div className='underline'></div>
         </div>
-        <FaGithubSquare />
+        <FaGithubSquare className='icon' />
         <Review />
       </section>
     </main>
