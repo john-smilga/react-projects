@@ -21,10 +21,17 @@ function App() {
       console.log(error);
     }
   };
+  const removeTour = (id) => {
+    let filterTour = tourData.filter((tour) => tour.id !== id);
+    setTourData(filterTour);
+  };
   // fetch api
   useEffect(() => {
     fetchTour(url);
   }, []);
+  // useEffect(() => {
+  //   removeTour("rec6d6T3q5EBIdCfD");
+  // }, [tourData]);
   return (
     <>
       {isLoading ? (
@@ -33,7 +40,7 @@ function App() {
         </main>
       ) : (
         <main>
-          <Tours tours={tourData} />
+          <Tours tours={tourData} removeTour={removeTour} />
         </main>
       )}
     </>
