@@ -2,9 +2,6 @@ import React, { useState } from "react";
 
 const Tour = ({ id, name, info, image, price, removeTour }) => {
   const [showMore, setShowMore] = useState(false);
-  const handleRemoveTour = () => {
-    console.log(id, name);
-  };
   return (
     <article className="single-tour">
       <img src={image} alt={name} />

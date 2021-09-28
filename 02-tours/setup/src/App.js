@@ -16,6 +16,7 @@ function App() {
       const tour = await res.json();
       setLoading(false);
       setTourData(tour);
+      console.log(tour);
     } catch (error) {
       setLoading(false);
       console.log(error);
@@ -29,16 +30,24 @@ function App() {
   useEffect(() => {
     fetchTour(url);
   }, []);
-  // useEffect(() => {
-  //   removeTour("rec6d6T3q5EBIdCfD");
-  // }, [tourData]);
   return (
     <>
-      {isLoading ? (
+      {isLoading && (
         <main>
           <Loading />
         </main>
-      ) : (
+      )}
+      {!isLoading && tourData.length === 0 && (
+        <main>
+          <div className="title">
+            <h2>no tours left</h2>
+            <button className="btn" onClick={() => fetchTour(url)}>
+              refresh
+            </button>
+          </div>
+        </main>
+      )}
+      {!isLoading && tourData.length !== 0 && (
         <main>
           <Tours tours={tourData} removeTour={removeTour} />
         </main>
