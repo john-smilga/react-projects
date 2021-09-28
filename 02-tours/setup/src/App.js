@@ -28,10 +28,11 @@ function App() {
   return (
     <>
       {isLoading ? (
-        <Loading />
+        <main>
+          <Loading />
+        </main>
       ) : (
         <main>
-          <h2>Tours Project</h2>
           <Tours tours={tourData} />
         </main>
       )}
