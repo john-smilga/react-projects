@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
 import Photo from './Photo';
@@ -11,6 +11,9 @@ function App() {
   const [photos, setPhotos] = useState([]);
   const [page, setPage] = useState(1);
   const [query, setQuery] = useState('');
+  const [newImages, setNewImages] = useState(false);
+  const mounted = useRef(false);
+
   const fetchImages = async () => {
     setLoading(true);
     let url;
@@ -33,35 +36,49 @@ function App() {
           return [...oldPhotos, ...data];
         }
       });
+
+      setNewImages(false);
       setLoading(false);
     } catch (error) {
-      console.log(error);
+      setNewImages(false);
       setLoading(false);
     }
   };
   useEffect(() => {
     fetchImages();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   useEffect(() => {
-    const event = window.addEventListener('scroll', () => {
-      if (
-        (!loading && window.innerHeight + window.scrollY) >=
-        document.body.scrollHeight - 2
-      ) {
-        setPage((oldPage) => {
-          return oldPage + 1;
-        });
-      }
+    if (!mounted.current) {
+      mounted.current = true;
+      return;
+    }
+    if (!newImages) return;
+    if (loading) return;
+    setPage((oldPage) => {
+      return oldPage + 1;
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [newImages]);
+
+  const event = () => {
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 2) {
+      setNewImages(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', event);
     return () => window.removeEventListener('scroll', event);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!query) return;
+    if (page === 1) {
+      fetchImages();
+    }
     setPage(1);
-    fetchImages();
   };
   return (
     <main>
