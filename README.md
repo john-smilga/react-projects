@@ -6,7 +6,7 @@ Find the Content Useful? [You can always buy me a coffee](https://www.buymeacoff
 
 #### Tutorial Video
 
-(React Tutorial)[https://youtu.be/iZhV0bILFb0]
+[React Tutorial](https://youtu.be/iZhV0bILFb0)
 
 #### All Projects
 
