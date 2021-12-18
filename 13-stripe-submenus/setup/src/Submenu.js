@@ -3,9 +3,12 @@ import { FaCreditCard } from "react-icons/fa";
 import { useGlobalContext } from "./context";
 
 const Submenu = () => {
-  const { isSubmenuOpen } = useGlobalContext();
+  const { isSubmenuOpen, leftPosition } = useGlobalContext();
   return (
-    <aside className={`submenu ${isSubmenuOpen ? "show" : ""}`}>
+    <aside
+      className={`submenu ${isSubmenuOpen ? "show" : ""}`}
+      style={{ "--left-position": `${leftPosition}px` }}
+    >
       {/* <div className='submenu-center'> */}
       <h4>Products</h4>
       <ul className='submenu-center col-4'>

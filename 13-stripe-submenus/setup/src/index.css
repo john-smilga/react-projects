@@ -43,6 +43,8 @@ Variables
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
   --fixed-width: 620px;
+  /*todo test left  */
+  --left-position: 50%;
 }
 /*
 =============== 
@@ -400,7 +402,8 @@ Stripe Styles
   border-bottom: 5px solid var(--clr-white);
   position: absolute;
   top: -5px;
-  left: 50%;
+  /* left: 50%; */
+  left: var(--left-position);
   transform: translateX(-50%);
 }
 

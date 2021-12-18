@@ -8,6 +8,7 @@ function App() {
     <div className='test'>
       <Navbar />
       <Hero />
+      <Sidebar />
       <Submenu />
     </div>
   );
