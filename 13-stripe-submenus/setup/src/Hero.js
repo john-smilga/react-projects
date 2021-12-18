@@ -15,7 +15,7 @@ const Hero = () => {
           <button className='btn'>Start now</button>
         </div>
         <div className='hero-images'>
-          <img className='phone-img' src={phoneImg} alt='phone' srcset='' />
+          <img className='phone-img' src={phoneImg} alt='phone' />
         </div>
       </div>
     </div>
