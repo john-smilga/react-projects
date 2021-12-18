@@ -19,7 +19,7 @@ const Navbar = () => {
     <nav className='nav '>
       <div className='nav-center'>
         <div className='nav-header'>
-          <img src={logo} alt='Stripe' />
+          <img src={logo} alt='Stripe' className='nav-logo' />
           <button className='btn toggle-btn' onClick={openSidebar}>
             <FaBars />
           </button>
@@ -51,9 +51,7 @@ const Navbar = () => {
           <li className='link-btn'>Developer</li>
           <li className='link-btn'>Company</li> */}
         </ul>
-        <div className=''>
-          <button className='btn signin-btn'>Sign in</button>
-        </div>
+        <button className='btn signin-btn'>Sign in</button>
       </div>
     </nav>
   );
@@ -86,13 +84,12 @@ const MapItemComponent = ({ index, page }) => {
   return (
     <li
       ref={submenuRef}
-      className='link-btn'
       key={index}
       // onMouseEnter={() => openSubmenu(position)}
       onMouseEnter={handleLocation}
       onMouseLeave={closeSubmenu}
     >
-      {page}
+      <button className='link-btn'>{page}</button>
     </li>
   );
 };

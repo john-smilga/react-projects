@@ -8,32 +8,23 @@ const Sidebar = () => {
   return (
     <aside className={`sidebar-wrapper ${isSidebarOpen ? "show" : ""}`}>
       <article className='sidebar'>
-        <h4>Products</h4>
         <button className='close-btn' onClick={closeSidebar}>
           <FaTimes />
         </button>
-        <ul className='sidebar-sublinks'>
-          <li>
-            <a href=''>
-              <FaCreditCard /> Payment
-            </a>
-          </li>
-          <li>
-            <a href=''>
-              <FaCreditCard /> Payment
-            </a>
-          </li>
-          <li>
-            <a href=''>
-              <FaCreditCard /> Payment
-            </a>
-          </li>
-          <li>
-            <a href=''>
-              <FaCreditCard /> Payment
-            </a>
-          </li>
-        </ul>
+        <div className='sidebar-links'>
+          {sublinks.map(({ page, links }, index) => (
+            <article key={index}>
+              <h4>{page}</h4>
+              <div className='sidebar-sublinks'>
+                {links.map(({ label, icon, url }, index) => (
+                  <a href={url}>
+                    {icon} {label}
+                  </a>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
       </article>
     </aside>
   );

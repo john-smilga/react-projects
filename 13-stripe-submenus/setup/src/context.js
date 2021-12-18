@@ -26,7 +26,6 @@ const AppProvider = ({ children }) => {
       leftPosition
     );
   };
-  const moveArrow = (position) => {};
   return (
     <AppContext.Provider
       value={{
