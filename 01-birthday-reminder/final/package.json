@@ -7,9 +7,12 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.24.0",
+    "cheerio": "^1.0.0-rc.10",
+    "pretty": "^2.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "request": "^2.88.2"
   },
   "scripts": {
     "start": "react-scripts start",
