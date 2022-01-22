@@ -10,6 +10,7 @@ Variables
   --clr-primary-2: hsl(162, 60%, 78%);
   --clr-primary-3: hsl(162, 61%, 67%);
   --clr-primary-4: hsl(162, 61%, 57%);
+  --dark-blue: hsl(205, 86%, 17%);
   /* primary/main color */
   --clr-primary-5: hsl(162, 73%, 46%);
   /* lighter shades of primary color */
@@ -59,7 +60,7 @@ Global Styles
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background: var(--clr-pink);
+  background: var(--dark-blue);
   color: var(--clr-grey-9);
   line-height: 1.5;
   font-size: 0.875rem;
