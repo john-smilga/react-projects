@@ -3,6 +3,9 @@ import React from 'react';
 const List = ({ people }) => {
   return (
     <>
+
+{/* Add logic here: if birthday is today, show the writers */}
+
       {people.map((person) => {
         const { name, birthday } = person;
         return (

@@ -47,18 +47,6 @@ async function scrapeData() {
   }
 }
 
-//MANIPULATE THE ARRAY
-
-//What do I want to do?
-
-// #First remove clutter manually: everything before and after the list => done
-// #Then Divide the array in one array per date
-//      ## if name is empty, "cut" the array. (how? slice -> returns subarray.  method match? filter?)
-let array = './writers-birthday.json'
-//  #then give the objects the right birthday date => map? 
-// is it better to have one birthday date per writer? or have an array per date with all the writers?
-// ## Change the string "Writer born 1 January" to a date format. First split(?) the string "Writer born". 
-// Then change month into number and add "0" and "." (e.g. 01.01) => will it match the date format?
 
 // Invoke the above function
 scrapeData();
