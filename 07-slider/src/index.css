@@ -156,12 +156,14 @@ Slider
   margin: 0 auto;
   margin-top: 4rem;
   width: 80vw;
+  /* have to have a height */
   height: 450px;
   max-width: 800px;
   text-align: center;
   position: relative;
   display: flex;
   overflow: hidden;
+  /*  only the active slide is shown */
 }
 .person-img {
   border-radius: 50%;
@@ -245,9 +247,11 @@ article.activeSlide {
   opacity: 1;
   transform: translateX(0);
 }
+/* moving left and right */
 article.lastSlide {
   transform: translateX(-100%);
 }
 article.nextSlide {
   transform: translateX(100%);
 }
+
