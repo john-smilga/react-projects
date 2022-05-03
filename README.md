@@ -14,7 +14,7 @@ Find the Content Useful? [You can always buy me a coffee](https://www.buymeacoff
 
 #### All Projects
 
-[Projects Site](www.johnsmilga.com)
+[Projects Site](https://www.johnsmilga.com/projects)
 
 ## Corresponding Tutorial Topics
 
