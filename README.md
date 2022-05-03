@@ -14,7 +14,7 @@ Find the Content Useful? [You can always buy me a coffee](https://www.buymeacoff
 
 #### All Projects
 
-[Projects Site](https://react-projects.netlify.app/)
+[Projects Site](www.johnsmilga.com)
 
 ## Corresponding Tutorial Topics
 
