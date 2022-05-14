@@ -34,4 +34,11 @@ export default [
     image:
       'https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg',
   },
+  {
+    id:6,
+    name:'Jake Lockly',
+    age:35,
+    image:
+            'https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/05/Moon-Knight-Jake-Lockley.jpg'
+  },
 ];
