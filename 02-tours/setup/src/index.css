@@ -174,7 +174,7 @@ main {
 .single-tour {
   background: var(--clr-white);
   border-radius: var(--radius);
-  margin: 2rem 0;
+  margin: 1.5rem 0;
   box-shadow: var(--light-shadow);
   transition: var(--transition);
 }
@@ -189,7 +189,7 @@ main {
   border-top-left-radius: var(--radius);
 }
 .tour-info {
-  display: flex;
+  display: block;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
@@ -213,14 +213,14 @@ main {
   border-radius: var(--radius);
 }
 .single-tour footer {
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 1rem;
 }
 .single-tour .delete-btn {
   display: block;
   width: 200px;
   margin: 1rem auto 0 auto;
   color: var(--clr-red-dark);
-  letter-spacing: var(--spacing);
+  letter-spacing: var(-spacing);
   background: transparent;
   border: 1px solid var(--clr-red-dark);
   padding: 0.25rem 0.5rem;
