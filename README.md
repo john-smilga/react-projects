@@ -1,22 +1,6 @@
-# React Projects
+#### How to Rename the master branch to main in Git
 
-#### React Course
-
-[My React Course](https://www.udemy.com/course/react-tutorial-and-projects-course/?referralCode=FEE6A921AF07E2563CEF)
-
-#### Support
-
-Find the Content Useful? [You can always buy me a coffee](https://www.buymeacoffee.com/johnsmilga)
-
-#### Tutorial Video
-
-[React Tutorial](https://youtu.be/iZhV0bILFb0)
-
-#### All Projects
-
-[Projects Site](https://react-projects.netlify.app/)
-
-## Corresponding Tutorial Topics
+[rename git branch](https://www.git-tower.com/learn/git/faq/git-rename-master-to-main)
 
 #### useState
 
@@ -56,13 +40,11 @@ Find the Content Useful? [You can always buy me a coffee](https://www.buymeacoff
 
 ## Advanced Projects (Course Exclusive)
 
-[My React Course](https://www.udemy.com/course/react-tutorial-and-projects-course/?referralCode=FEE6A921AF07E2563CEF)
-
-16. Markdown Preview
-17. Random Person
-18. Pagination
-19. Stock Photos
-20. Dark Mode
-21. Movie DB
-22. Hacker News
-23. Quiz
+1.  Markdown Preview
+2.  Random Person
+3.  Pagination
+4.  Stock Photos
+5.  Dark Mode
+6.  Movie DB
+7.  Hacker News
+8.  Quiz
