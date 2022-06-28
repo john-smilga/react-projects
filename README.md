@@ -8,9 +8,9 @@
 
 #### useEffect and Conditional Rendering
 
-2. Tours
-3. Reviews
-4. Questions
+2. Tours Done ✅
+3. Reviews Done ✅
+4. Questions Done ✅
 5. Menu
 6. Tabs
 7. Slider
