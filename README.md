@@ -11,9 +11,9 @@
 2. Tours Done ✅
 3. Reviews Done ✅
 4. Questions Done ✅
-5. Menu
-6. Tabs
-7. Slider
+5. Menu Done ✅
+6. Tabs Done ✅
+7. Slider Done ✅
 
 #### Forms
 
