@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
-import data from './data';
-import SingleQuestion from './Question';
+import React from "react";
+import Questions from "./Questions";
 function App() {
-  return <h2>accordion project setup</h2>;
+  return (
+    <>
+      <Questions />
+    </>
+  );
 }
 
 export default App;
