@@ -17,9 +17,9 @@
 
 #### Forms
 
-8. Lorem Ipsum Generator
-9. Color Shades Generator
-10. Grocery Bud
+8. Lorem Ipsum Generator Done ✅
+9. Color Shades Generator Done ✅
+10. Grocery Bud Done ⚠️ BUT need to review!
 
 #### useRef
 
