@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const Tours = ({ tours }) => {
+  console.log(tours);
   return (
     <section>
       <div className="title">
