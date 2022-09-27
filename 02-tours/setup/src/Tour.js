@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-
+import React from "react";
+import Tours from "./Tour";
 const Tour = () => {
-  return <h2>tour component</h2>;
+  return <h2>tours component</h2>;
 };
 
 export default Tour;
