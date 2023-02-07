@@ -1,0 +1,68 @@
+.hero-section-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+.hero-section{
+    height: 100vh;
+    text-align: center;
+}
+.hero-heading{
+    font-size: 140px;
+    font-weight: 800;
+    line-height: 1;
+}
+.hero-subheading{
+    font-size: 30px;
+    font-weight: 700;
+    margin: 35px 58px;
+    line-height: 38px;
+}
+.hero-claim-label{
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+    background:var(--bg-grey);
+    width: 100%;
+    position: absolute;
+    padding: .7em;
+}
+.claim-anchor{
+    margin-left: .2em;
+    color: var(--link-blue);
+    padding: .7em;
+}
+@media all and (max-width:1279px){
+    .hero-heading{
+        font-size: 82px;
+        line-height: 92px;
+    }
+    .hero-subheading{
+        font-size: 25px;
+    }
+    .hero-claim-label{
+        font-size: 20px;
+        line-height:24px ;
+    }
+    .claim-anchor{
+        font-size: 20px;
+    }
+}
+@media all and (max-width:767px) {
+    .hero-section{
+        align-items: flex-start;
+        text-align: left;
+        position: relative;
+        top: 0px;
+    }
+    .hero-heading{
+        font-size: 55px;
+        line-height: 47.5px;
+        width: 270px;
+        margin-top: 60px;
+    }
+    .hero-subheading{
+        font-size: 16px;
+        line-height: 22px;
+        margin: 35px 0px;
+    }   
+}

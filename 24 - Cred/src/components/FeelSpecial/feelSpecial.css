@@ -1,0 +1,22 @@
+.feel-special{
+ background:var(--bg-red); 
+ background-image:url('https://web-images.credcdn.in/_next/assets/images/home-page/deserve-more-bg.jpg');
+}
+
+@media all and (max-width:1279px){
+    .feel-special{
+        background-position: center bottom;
+    }
+}
+@media all and (max-width:767px){
+    .feel-special{
+      background-image: url('https://web-images.credcdn.in/_next/assets/images/home-page/deserve-more-bg-mobile.jpg');
+      background-size: cover;
+      min-height: 850px;  
+      background-position: right center ;
+    }
+    .photo-section-description{
+        font-size: 19px;
+        font-weight: 600;
+    }
+}
