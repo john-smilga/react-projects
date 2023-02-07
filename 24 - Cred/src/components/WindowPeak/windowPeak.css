@@ -1,0 +1,9 @@
+.window-peak{
+    min-height: 500px;
+    width: 100%;
+    background-image: url("https://web-images.credcdn.in/_next/assets/images/home-page/neopop-image-mock.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}

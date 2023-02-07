@@ -1,0 +1,31 @@
+.brands-love{
+    background:var(--white);
+    color: var(--bg-black);
+    padding: 60px 0px;
+}
+.brands-love-heading{
+    font-size: 24px;
+    font-weight: 700;
+}
+.brands-love-banner{
+    background: url('https://web-images.credcdn.in/_next/assets/images/home-page/brands-desktop.png') no-repeat;
+    background-position: center;
+    background-size: 100%;
+    height: 50px;
+    width: 100%;
+    margin-top:50px;
+}
+
+@media all and (max-width:767px) {
+    .brands-love-heading{
+        font-size: 18px;
+    }
+    .brands-love-banner{
+        background: url('https://web-images.credcdn.in/_next/assets/images/home-page/brands-mobile.png') no-repeat;
+        background-size: contain ;
+        height: 240px;
+        margin-top: 34px;
+        background-position: left center;
+        width: 100%;
+    }
+}

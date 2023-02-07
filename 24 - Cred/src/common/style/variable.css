@@ -1,0 +1,13 @@
+:root{
+    --bg-black:#0f0f0f;
+    --white:#f8f8f8;
+    --bg-grey: #272727;
+    --link-blue:#7ea2ec;
+    --bg-light-grey:rgba(39,43,45,0.43);
+    --bg-red:rgb(238,47,76);
+    --bg-blue: rgb(26,97,233);
+    --bg-purple:rgb(90,30,203);
+    --mobile-box-shadow:rgb(176 176 178 / 16%) 0px -5px 6px 0px inset, rgb(0 0 0 / 24%) 4px 6px 11px 1px inset;
+    --mobile-bg:rgb(39,43,45);
+    --bg-green:rgb(2,119,87);
+}
