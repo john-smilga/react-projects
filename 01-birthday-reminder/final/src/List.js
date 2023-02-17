@@ -20,3 +20,4 @@ const List = ({ people }) => {
 };
 
 export default List;
+/*learned new thing thanks*/
