@@ -156,7 +156,7 @@ main {
 }
 .person {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 2fr;
   column-gap: 0.75rem;
   margin-bottom: 1.5rem;
   align-items: center;
@@ -171,6 +171,12 @@ main {
 .person h4 {
   margin-bottom: 0.35rem;
 }
+
+.person h4:hover {
+  color: red;
+  cursor: pointer;
+}
+
 .person p {
   margin-bottom: 0;
 }
