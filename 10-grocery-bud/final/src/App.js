@@ -15,10 +15,12 @@ function App() {
   const [isEditing, setIsEditing] = useState(false);
   const [editID, setEditID] = useState(null);
   const [alert, setAlert] = useState({ show: false, msg: '', type: '' });
+  const [isValid, setIsValid] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!name) {
       showAlert(true, 'danger', 'please enter value');
+      setIsValid(true);
     } else if (name && isEditing) {
       setList(
         list.map((item) => {
@@ -70,10 +72,13 @@ function App() {
         <div className='form-control'>
           <input
             type='text'
-            className='grocery'
+            className={`grocery ${isValid ? 'valid' : ''}`}
             placeholder='e.g. eggs'
             value={name}
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => {
+              setIsValid(false);
+              return setName(e.target.value);
+            }}
           />
           <button type='submit' className='submit-btn'>
             {isEditing ? 'edit' : 'submit'}
