@@ -5,6 +5,9 @@ import Home from './Home'
 function App() {
   return (
     <>
+    <Home></Home>
+    <Modal></Modal>
+    <Sidebar></Sidebar>
       <h2>modal-sidebar project setup</h2>
     </>
   )
