@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import data from './data';
-import SingleQuestion from './Question';
+import Question from './Question'; //there is no SingleQuestion in Question.js
 function App() {
   const [questions, setQuestions] = useState(data);
   return (
