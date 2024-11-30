@@ -4,12 +4,14 @@ Global Styles
 ===============
 */
 
+/* Root variables for colors */
 :root {
-  --clr-bcg: #fff;
-  --clr-font: #282c35;
-  --clr-primary: #d23669;
+  --clr-bcg: #fff; /* Background color */
+  --clr-font: #282c35; /* Font color */
+  --clr-primary: #d23669; /* Primary accent color */
 }
 
+/* Resetting margins, padding, and box-sizing for all elements */
 *,
 ::after,
 ::before {
@@ -17,14 +19,16 @@ Global Styles
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Global styles for the body */
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background: var(--clr-bcg);
-  color: var(--clr-font);
-  line-height: 1.5;
-  font-size: 0.875rem;
-  transition: all 0.3s linear;
+  background: var(--clr-bcg); /* Using the root variable for background */
+  color: var(--clr-font); /* Using the root variable for font color */
+  line-height: 1.5; /* Consistent line spacing */
+  font-size: 0.875rem; /* Base font size */
+  transition: all 0.3s linear; /* Smooth transition effect for styles */
 }
 
 /*
@@ -32,53 +36,79 @@ body {
 Navbar
 ===============
 */
+
+/* Centering and styling the navigation container */
 .nav-center {
-  width: 90vw;
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem 0;
+  width: 90vw; /* Responsive width */
+  max-width: 600px; /* Maximum width for larger screens */
+  margin: 0 auto; /* Center align the container */
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Spacing items evenly */
+  align-items: center; /* Center align items vertically */
+  padding: 2rem 0; /* Top and bottom padding */
 }
+
+/* Styling the heading inside the navbar */
 .nav-center h1 {
-  font-size: 2.5rem;
-  text-transform: capitalize;
-  letter-spacing: 2px;
+  font-size: 2.5rem; /* Large font size */
+  text-transform: capitalize; /* Capitalize text */
+  letter-spacing: 2px; /* Spacing between letters */
 }
 
+/*
+=============== 
+Articles Section
+===============
+*/
+
+/* Styling the articles container */
 .articles {
-  padding: 5rem 0;
-  width: 90vw;
-  max-width: 600px;
-  margin: 0 auto;
-}
-.post {
-  margin-bottom: 3rem;
-}
-.post h2 {
-  color: var(--clr-primary);
-  text-transform: capitalize;
-  letter-spacing: 2px;
-  font-size: 1.75rem;
-}
-.post-info {
-  margin-bottom: 0.75rem;
-  font-style: italic;
-}
-.post-info span {
-  margin-right: 0.5rem;
+  padding: 5rem 0; /* Top and bottom padding */
+  width: 90vw; /* Responsive width */
+  max-width: 600px; /* Maximum width for larger screens */
+  margin: 0 auto; /* Center align the container */
 }
 
+/* Styling individual post containers */
+.post {
+  margin-bottom: 3rem; /* Space between posts */
+}
+
+/* Styling post titles */
+.post h2 {
+  color: var(--clr-primary); /* Using the primary color */
+  text-transform: capitalize; /* Capitalize text */
+  letter-spacing: 2px; /* Spacing between letters */
+  font-size: 1.75rem; /* Medium font size */
+}
+
+/* Styling post information */
+.post-info {
+  margin-bottom: 0.75rem; /* Space below the info section */
+  font-style: italic; /* Italicize text */
+}
+
+/* Adding spacing to post info items */
+.post-info span {
+  margin-right: 0.5rem; /* Space between items */
+}
+
+/*
+=============== 
+Buttons
+===============
+*/
+
+/* General button styles */
 .btn {
-  background: var(--clr-primary);
-  color: var(--clr-bcg);
-  padding: 0.25rem 0.5rem;
-  border-radius: 5px;
-  border-color: transparent;
-  text-transform: capitalize;
-  transition: all 0.3s linear;
-  font-weight: bold;
-  letter-spacing: 2px;
-  cursor: pointer;
+  background: var(--clr-primary); /* Primary background color */
+  color: var(--clr-bcg); /* Text color contrasting background */
+  padding: 0.25rem 0.5rem; /* Padding for the button */
+  border-radius: 5px; /* Rounded corners */
+  border-color: transparent; /* No visible border */
+  text-transform: capitalize; /* Capitalize text */
+  transition: all 0.3s linear; /* Smooth transition effect */
+  font-weight: bold; /* Bold text */
+  letter-spacing: 2px; /* Spacing between letters */
+  cursor: pointer; /* Pointer cursor on hover */
 }
